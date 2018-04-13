@@ -94,9 +94,8 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      LIMIT 1
       SQL
       
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql).collect do |row|
   end
 end
